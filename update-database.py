@@ -6,11 +6,16 @@ c = conn.cursor()
 
 
 # Update records
+c.execute(""" UPDATE customers SET last_name = "Phan"
+            WHERE rowid = 3
+""")
+
+conn.commit()
+
 
 # Query the database
-c.execute("""SELECT *
-             FROM customers
-             WHERE first_name = "Alicia" """)
+c.execute("""SELECT rowid, *
+             FROM customers """)
 # c.fetchone()
 # c.fetchmany(3)
 
