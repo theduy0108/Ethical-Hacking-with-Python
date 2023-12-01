@@ -11,4 +11,4 @@ c.execute("SELECT * FROM customers")
 print(c.fetchall())
 c.commit()
 c.close()
-
+# add comment for close data
