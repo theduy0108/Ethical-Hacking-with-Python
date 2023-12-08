@@ -50,42 +50,20 @@ import json
 # print(data)
 
 # Example of make request function
-from urllib.error import HTTPError, URLError
+#
+
+# Fixing the SSL CERTIFICATE_VERIFY_FAILED ERROR:
+# from urllib.request import urlopen
+# urlopen("https://superfish.badssl.com/") => create bugs
+
+# import ssl
+# unverified_context = ssl._create_unverified_context()
+# urlopen("https://superfish.badssl.com/", context=unverified_context)
+
+import ssl
 from urllib.request import urlopen
+import certifi
+certifi_context = ssl.create_default_context(cafile=certifi.where())
+urlopen("https://sha384.badssl.com/", context=certifi_context)
 
 
-def make_request(url):
-    try:
-        with urlopen(url, timeout=10) as response:
-            print(response.status)
-            return response.read(), response
-    except HTTPError as error:
-        print(error.status, error.reason)
-    except URLError as error:
-        print(error.reason)
-    except TimeoutError:
-        print("Request timed out")
-
-
-test_website = make_request("https://httpstat.us/403")
-print(test_website)
-
-
-def make_request_newversion(url, headers=None):
-    request = Request(url, headers=headers or {})
-    try:
-        with urlopen(request, timeout=10) as response:
-            print(response.status)
-            return response.read(), response
-    except HTTPError as error:
-        print(error.status, error.reason)
-    except URLError as error:
-        print(error.reason)
-    except TimeoutError:
-        print("Request timed out")
-
-
-body, response = make_request_newversion(
-    "https://www.httpbin.org/user-agent",
-    {"User-Agent": "Real Python"})
-print(body, response)
