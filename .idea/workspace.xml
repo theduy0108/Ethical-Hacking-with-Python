@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="305e4caf-f1db-481f-a182-3bca1a489476" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chaper2-module-request-authenticated-post-request.py" beforeDir="false" afterPath="$PROJECT_DIR$/chaper2-module-request-authenticated-post-request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter2-module-request.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter2-module-request.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,8 +190,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/chapter2-module-request.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="11" />
+          <line>29</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chapter2-module-request.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chapter2-module-request.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
